@@ -1230,7 +1230,7 @@ rule gather_qc_metrics:
 		RemoteBamFilePath=$(dirname $PWD)/{input.bam}
 
 		# print vcf meta data needed for db import
-		echo \#\#SAMPLE\=\<ID\="{wildcards.sample_name}",Tissue\=Germline,WorklistId\={params.worksheet_id},seqid\={params.seqid},Assay\={params.panel},PipelineName\={params.pipeline_name},PipelineVersion\={params.pipeline_version},RawSequenceQuality\="$rawSequenceQuality",PercentMapped\="$pctPfReadsAligned",ATDropout\="$atDropout",GCDropout\="$gcDropout",MeanInsertSize\="$meanInsertSize",SDInsertSize\="$sdInsertSize",DuplicationRate\="$duplicationRate",TotalReads\="$totalReads",PctSelectedBases\="$pctSelectedBases",MeanOnTargetCoverage\="$meanOnTargetCoverage",PctTargetBasesCt\="$pctTargetBasesCt",EstimatedContamination\="$freemix",GenotypicGender\="$calcSex",TotalTargetedUsableBases\="$totalTargetedUsableBases",RemoteVcfFilePath\="$RemoteVcfFilePath",RemoteBamFilePath\="$RemoteBamFilePath"\> > {output.meta}
+		echo \#\#SAMPLE\=\<ID\="{wildcards.sample_name}",Tissue\=Germline,WorklistId\={params.worksheet_id},SeqId\={params.seqid},Assay\={params.panel},PipelineName\={params.pipeline_name},PipelineVersion\={params.pipeline_version},RawSequenceQuality\="$rawSequenceQuality",PercentMapped\="$pctPfReadsAligned",ATDropout\="$atDropout",GCDropout\="$gcDropout",MeanInsertSize\="$meanInsertSize",SDInsertSize\="$sdInsertSize",DuplicationRate\="$duplicationRate",TotalReads\="$totalReads",PctSelectedBases\="$pctSelectedBases",MeanOnTargetCoverage\="$meanOnTargetCoverage",PctTargetBasesCt\="$pctTargetBasesCt",EstimatedContamination\="$freemix",GenotypicGender\="$calcSex",TotalTargetedUsableBases\="$totalTargetedUsableBases",RemoteVcfFilePath\="$RemoteVcfFilePath",RemoteBamFilePath\="$RemoteBamFilePath"\> > {output.meta}
 
 		"""
 
