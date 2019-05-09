@@ -1405,10 +1405,10 @@ if panel == "IlluminaTruSightCancer":
 			index = "{sample_name}/" + seqid + "_{sample_name}_{sample_number}_DepthOfCoverage.gz.tbi",
 			bed = config["hotspot_bed_dir"] + "{bedfile}.bed",
 		output:
-			"{sample_name}/hotspot_coverage/{sample_name}_{sample_number}_{bedfile}.coverage",
-			"{sample_name}/hotspot_coverage/{sample_name}_{sample_number}_{bedfile}.gaps",
-			"{sample_name}/hotspot_coverage/{sample_name}_{sample_number}_{bedfile}.missing",
-			"{sample_name}/hotspot_coverage/{sample_name}_{sample_number}_{bedfile}.totalCoverage"
+			"{sample_name}/custom_coverage/{sample_name}_{sample_number}_{bedfile}.coverage",
+			"{sample_name}/custom_coverage/{sample_name}_{sample_number}_{bedfile}.gaps",
+			"{sample_name}/custom_coverage/{sample_name}_{sample_number}_{bedfile}.missing",
+			"{sample_name}/custom_coverage/{sample_name}_{sample_number}_{bedfile}.totalCoverage"
 		params:
 			coverage_calculator = config["coverage_calculator"],
 			min_depth = config["minimum_coverage"]
@@ -1420,14 +1420,14 @@ if panel == "IlluminaTruSightCancer":
 			"-D {input.depth} "
 			"--depth {params.min_depth} "
 			"--padding 0 "
-			"--outdir {wildcards.sample_name}/hotspot_coverage/ "
+			"--outdir {wildcards.sample_name}/custom_coverage/ "
 			"--outname {wildcards.sample_name}_{wildcards.sample_number}_{wildcards.bedfile} "
 
 	rule collect_custom_coverage:
 		input:
 			get_all_custom_coverage
 		output:
-			"temp/hotspot_coverage/custom.finished"
+			"temp/custom_coverage/custom.finished"
 		group:
 			"custom_coverage"
 		shell:
@@ -1466,7 +1466,7 @@ else:
 				"temp/validated_vcf/{seqid}.validated",
 				expand("temp/manta/{sample_name}_{sample_number}_diploidSV.vcf.gz", zip, sample_name=sample_names, sample_number=sample_numbers),
 				expand("{sample_name}/" + seqid + "_{sample_name}_{sample_number}_Gaps.bed",zip, sample_name=sample_names, sample_number=sample_numbers),
-				"temp/hotspot_coverage/custom.finished",
+				"temp/custom_coverage/custom.finished",
 				"variant_reports/{seqid}_finished.txt",
 				seqid + "_cnvReport.csv",
 				"{seqid}_all_variants_filtered_genotype_roi_meta_nomt.vcf",

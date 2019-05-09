@@ -21,7 +21,7 @@ gnomad_genomes:
 1000k_high_confidence_snps:
   /state/partition1/db/human/gatk/2.8/b37/1000G_phase1.snps.high_confidence.b37.vcf
 capture_bed_file:
-  /home/transfer/app_development/germline-enrichment-snakemake/configs/IlluminaTruSightOne/IlluminaTruSightOne_ROI_b37.bed 
+  /share/data/diagnostics/pipelines/germline-enrichment-snakemake/germline-enrichment-snakemake-development/configs/IlluminaTruSightOne/IlluminaTruSightOne_ROI_b37.bed 
 fastq_screen_config:
   /share/apps/fastqscreen-distros/fastq_screen_v0.10.0/fastq_screen.conf
 reference_sequence_dict:
@@ -41,17 +41,17 @@ spliceai:
 ccr_bed:
   /share/data/db/human/CCR/ccrs.all.v2.20180420_37.bed.gz
 coverage_calculator:
-  /share/data/diagnostics/apps/CoverageCalculatorPy-1.0.0/CoverageCalculatorPy.py
+  /share/data/diagnostics/apps/CoverageCalculatorPy/CoverageCalculatorPy-1.0.0/CoverageCalculatorPy.py
 germline_hotspots:
-  /home/transfer/app_development/germline-enrichment-snakemake/configs/GermlineEnrichment_Hotspots.bed
+  /share/data/diagnostics/pipelines/germline-enrichment-snakemake/germline-enrichment-snakemake-development/configs/GermlineEnrichment_Hotspots.bed
 refseq:
   /share/data/db/human/refseq/ref_GRCh37.p13_top_level_canonical_b37_sorted.gff3.gz
 filter_config:
-  /home/transfer/app_development/germline-enrichment-snakemake/configs/filter_config_cluster.yaml
+  /share/data/diagnostics/pipelines/germline-enrichment-snakemake/germline-enrichment-snakemake-development/configs/filter_config_cluster.yaml
 local_panel_app_dump:
   /home/transfer/panelappdump.csv
 germline_variant_filter:
-  /home/transfer/app_development/germline_variant_filter/germline_variant_filter.py
+  /share/data/diagnostics/apps/germline_variant_filter/germline_variant_filter-0.1/germline_variant_filter.py
 
 # Alternate pipeline execution
 
