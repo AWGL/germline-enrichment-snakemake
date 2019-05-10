@@ -2,7 +2,7 @@
     "__default__" :
     {
         "walltime" : "12:00:00",
-        "ncpus" : 12
+        "ncpus" : 11
     },
     "create_gvcfs" :
     {

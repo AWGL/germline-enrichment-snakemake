@@ -99,17 +99,17 @@ minimum_coverage:
 variant_evaluation_threads:
   6
 bwa_threads:
-  12
+  11
 fastp_threads:
-  12
+  11
 fastq_screen_threads:
-  12
+  11
 fastqc_threads:
-  12
+  11
 manta_threads:
-  12
+  11
 vep_threads:
-  12
+  11
 
 # Java Options
 java_home:
