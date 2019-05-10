@@ -5,7 +5,6 @@
 An rewrite of the GermlineEnrichment pipeline incorporating several new features.
 
 * Snakemake workflow manager
-* GATK4
 * Parallelised variant calling
 
 This should give improved speed as well as giving the ability to restart pipelines from arbitrary points.

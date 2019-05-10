@@ -17,7 +17,7 @@ dbsnp_vcf_eval:
 gnomad_exomes:
   /share/data/db/human/gnomad/gnomad.exomes.r2.0.1.sites.vcf.gz
 gnomad_genomes:
-  /share/data/db/human/vep/snps/gnomad.genomes.r2.0.1.sites.noVEP.vcf.gz
+  /share/data/db/human/gnomad/gnomad.genomes.r2.0.1.sites.noVEP.vcf.gz
 1000k_high_confidence_snps:
   /state/partition1/db/human/gatk/2.8/b37/1000G_phase1.snps.high_confidence.b37.vcf
 capture_bed_file:
@@ -27,7 +27,7 @@ fastq_screen_config:
 reference_sequence_dict:
   /state/partition1/db/human/gatk/2.8/b37/human_g1k_v37.dict
 vep_cache_location:
-  /share/data/db/human/vep/vep_cache
+  /share/data/db/human/vep_cache/refseq37
 genomic_superdups_bed:
   /share/data/db/human/genomicSuperDups/genomicSuperDups_b37.bed.gz
 picard_temp_dir:

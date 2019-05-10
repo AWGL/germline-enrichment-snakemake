@@ -64,7 +64,7 @@ def get_all_custom_coverage(wildcards):
 
 		for bedfile in beds[0]:
 
-			my_input = sample_name + "/hotspot_coverage/" + sample_name + "_" + sample_number + "_" + bedfile + ".coverage"
+			my_input = sample_name + "/custom_coverage/" + sample_name + "_" + sample_number + "_" + bedfile + ".coverage"
 			file_list.append(my_input)
 
 	return file_list
@@ -85,7 +85,7 @@ rule all:
 # Create a PED file for downstream analysis
 rule create_ped_file:
 	input:
-		config_location
+		ancient(config_location)
 	output:
 		"{seqid}.ped"
 	shell:
