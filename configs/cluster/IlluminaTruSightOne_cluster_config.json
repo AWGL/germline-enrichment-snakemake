@@ -18,19 +18,19 @@
 
     "merge_and_remove_duplicates" :
     {
-        "walltime" : "6:00:00",
-        "ncpus" : 6
+        "walltime" : "24:00:00",
+        "ncpus" : 12
     },
 
     "realign_indels" :
     {
-        "walltime" : "6:00:00",
+        "walltime" : "24:00:00",
         "ncpus" : 6
     },
 
     "identify_realignment_regions" :
     {
-        "walltime" : "6:00:00",
+        "walltime" : "24:00:00",
         "ncpus" : 6
     },
 
